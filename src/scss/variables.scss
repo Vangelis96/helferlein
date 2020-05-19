@@ -4,4 +4,17 @@ $module-width: (
 	desktop: 200px,
 	tablet: 150px,
 	mobile: 100px,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$theme-colors: (
+	grey1: #333333,
+
 )
