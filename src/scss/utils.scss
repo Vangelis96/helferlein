@@ -1,0 +1,34 @@
+
+@mixin flex-v-center {
+	display: flex;
+	align-items: center;
+}
+
+.flex-v-center {
+	@include flex-v-center();
+}
+
+.f-right {
+	justify-content: right;
+}
+
+@mixin reset-margins($parameters) {
+	@each $property in $parameters {
+		#{$property} {
+			margin: 0;
+		}
+	  }
+}
+
+.h-100 {
+	height: 100%;
+}
+
+.v-100 {
+	width: 100%;
+}
+
+.vh-100 {
+	width: 100%;
+	height: 100%;
+}

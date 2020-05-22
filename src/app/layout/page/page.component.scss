@@ -1,33 +1,33 @@
 // @import "~bootstrap/scss/variables";
 @import "../../../scss/variables.scss";
+@import "../../../scss/utils.scss";
 @import "~bootstrap/scss/mixins";
 
 header {
 	height: 70px;
-	background-color: map-get($theme-colors, grey1);
+	background-color: map-get($theme-colors, main-blue);
 }
 
 .navigation {
+	display: flex;
+	align-items: center;
 	height: 100%;
+	color: white;
+	font-weight: map-get($font-weight, bold);
 
-	&-container {
-		height: 100%;
-	}
+	@include reset-margins(h6 ul);
 
 	&-desktop {
-		display: none;
-		height: 100%;
 
-		ul {
-			list-style-type: none;
-			display: flex;
-			align-items: center;
-		}
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+		height: 100%;
 
 		li {
 			display: inline-block;
 			padding: 0 10px;
-			color: white;
+			height: 100%;
 
 			&:first-child {
 				padding-left: 0;
@@ -37,9 +37,11 @@ header {
 				padding-right: 0;
 			}
 		}
+	}
 
-		@include media-breakpoint-up(lg) {
-			display: block;
-		}
+	&__hamburger {
+		background-color: transparent;
+		color: map-get($theme-colors, white);
+		line-height: 1;
 	}
 }

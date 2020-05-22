@@ -1,0 +1,23 @@
+@mixin font-settings($size: base, $weight: base, $spacing: normal, $transform: none) {
+	font-size: map-get($font-size, $size);
+	font-weight: map-get($font-weight, $weight);
+	letter-spacing: $spacing;
+	text-transform: $transform;
+}
+
+h1, .h1 {
+
+}
+
+h2, .h2 {
+
+}
+
+h6, .h2 {
+	@include font-settings(large, medium, 0.15px);
+}
+
+.caption {
+	@include font-settings(xs, bold, 0.4px, uppercase);
+}
+

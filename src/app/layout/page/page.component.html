@@ -1,14 +1,38 @@
-<header>
-	<!-- <div class="page-title">Helferlein</div> -->
-	<nav class="navigation">
-		<div class="container navigation-container">
-			<ul class="navigation-desktop">
-				<li>Erstellen</li>
-				<li>Erledigen</li>
-				<li>Module</li>
-			</ul>
-		</div>
-	</nav>
-	<div class="hamburger"></div>
-</header>
-<ng-content></ng-content>
+<mat-sidenav-container class="h-100">
+	<mat-sidenav #drawer class="" mode="over" position="end">
+		<p>Auto-resizing sidenav</p>
+		<p>Lorem, ipsum dolor sit amet consectetur.</p>
+	</mat-sidenav>
+	<mat-sidenav-content>
+		<header>
+			<nav class="navigation">
+				<div class="container h-100">
+					<div class="row h-100">
+						<div class="col col-lg-2 flex-v-center">
+							<h6>Helferlein</h6>
+						</div>
+						<div class="d-none d-lg-flex col-lg-9 flex-v-center">
+							<ul class="navigation-desktop">
+								<li>
+									<hlf-icon-button icon="add">Erstellen</hlf-icon-button>
+								</li>
+								<li>
+									<hlf-icon-button icon="check">Erledigen</hlf-icon-button>
+								</li>
+								<li>
+									<hlf-icon-button icon="folder">Module</hlf-icon-button>
+								</li>
+							</ul>
+						</div>
+						<div class="col col-lg-1 flex-v-center f-right">
+							<button mat-icon-button class="navigation__hamburger" (click)="drawer.toggle()">
+								<mat-icon>menu</mat-icon>
+							</button>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<ng-content></ng-content>
+	</mat-sidenav-content>
+</mat-sidenav-container>

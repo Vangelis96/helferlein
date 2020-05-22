@@ -16,5 +16,24 @@ $grid-breakpoints: (
 
 $theme-colors: (
 	grey1: #333333,
+	main-blue: #03A9F4,
+	white: #FFFFFF,
+);
 
-)
+$font-weight: (
+	light: 200,
+	base: 400,
+	medium: 500,
+	bold: 700,
+	black: 800,
+);
+
+$font-size: (
+	xs: 12px,
+	small: 13px,
+	base: 14px,
+	medium: 18px,
+	large: 20px,
+	xl: 24px,
+	xxl: 28px,
+);
