@@ -7,6 +7,8 @@ import { ModuleModule } from './module';
 import { LayoutModule } from './layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { CreateOverviewModule } from './create-overview';
+import { DoOverviewModule } from './do-overview';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { CommonModule } from '@angular/common';
 	ModuleModule,
 	LayoutModule,
 	CommonModule,
+	CreateOverviewModule,
+	DoOverviewModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
