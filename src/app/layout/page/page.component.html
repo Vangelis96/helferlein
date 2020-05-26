@@ -1,38 +1,51 @@
 <mat-sidenav-container class="h-100">
-	<mat-sidenav #drawer class="" mode="over" position="end">
+	<mat-sidenav #drawer mode="over" position="end">
 		<p>Auto-resizing sidenav</p>
 		<p>Lorem, ipsum dolor sit amet consectetur.</p>
 	</mat-sidenav>
 	<mat-sidenav-content>
-		<header>
-			<nav class="navigation">
-				<div class="container h-100">
-					<div class="row h-100">
-						<div class="col col-lg-2 flex-v-center">
-							<h6>Helferlein</h6>
+		<div class="page-wrapper">
+			<header>
+				<nav class="navigation">
+					<div class="container h-100">
+						<div class="row h-100">
+							<div class="col col-lg-2 flex-v-center">
+								<h6>Helferlein</h6>
+							</div>
+							<div class="d-none d-lg-flex col-lg-9 flex-v-center">
+								<ul class="navigation-desktop">
+									<li>
+										<hlf-icon-button icon="add">Erstellen</hlf-icon-button>
+									</li>
+									<li>
+										<hlf-icon-button icon="check">Erledigen</hlf-icon-button>
+									</li>
+									<li>
+										<hlf-icon-button icon="folder">Module</hlf-icon-button>
+									</li>
+								</ul>
+							</div>
+							<div class="col col-lg-1 flex-v-center f-right">
+								<button mat-icon-button class="navigation__hamburger" (click)="drawer.toggle()">
+									<mat-icon>menu</mat-icon>
+								</button>
+							</div>
 						</div>
-						<div class="d-none d-lg-flex col-lg-9 flex-v-center">
-							<ul class="navigation-desktop">
-								<li>
-									<hlf-icon-button icon="add">Erstellen</hlf-icon-button>
-								</li>
-								<li>
-									<hlf-icon-button icon="check">Erledigen</hlf-icon-button>
-								</li>
-								<li>
-									<hlf-icon-button icon="folder">Module</hlf-icon-button>
-								</li>
-							</ul>
-						</div>
-						<div class="col col-lg-1 flex-v-center f-right">
-							<button mat-icon-button class="navigation__hamburger" (click)="drawer.toggle()">
-								<mat-icon>menu</mat-icon>
-							</button>
+					</div>
+				</nav>
+			</header>
+			<div class="content-section">
+				<ng-content></ng-content>
+			</div>
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							Helferlein
 						</div>
 					</div>
 				</div>
-			</nav>
-		</header>
-		<ng-content></ng-content>
+			</footer>
+		</div>
 	</mat-sidenav-content>
 </mat-sidenav-container>

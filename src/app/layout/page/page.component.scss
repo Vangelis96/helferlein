@@ -45,3 +45,22 @@ header {
 		line-height: 1;
 	}
 }
+
+footer {
+	background-color: map-get($theme-colors, main-blue);
+	height: 70px;
+}
+
+.page-wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.content-section {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+
