@@ -1,6 +1,18 @@
 <hlf-page>
 	<div class="container">
-		<h1>Module</h1>
-		<hlf-module-tile [module]="modules[0]"></hlf-module-tile>
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2">
+				<div class="row">
+					<div class="col-12">
+						<h1>Module</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4 col-md-3 col--module" *ngFor="let module of modules">
+						<hlf-module-tile [module]="module"></hlf-module-tile>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </hlf-page>
