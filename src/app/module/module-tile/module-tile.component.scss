@@ -1,4 +1,38 @@
 
-.c-module-tile {
+@import "../../../scss/variables.scss";
 
+.c-module-tile {
+	min-height: 130px;
+	padding: 15px;
+	border-radius: 4px;
+	background-color: map-get($theme-colors, grey1); // default color for white font
+	color: map-get($theme-colors, white);
+
+	&--indigo {
+		background-color: map-get($theme-colors, indigo);
+	}
+	&--teal {
+		background-color: map-get($theme-colors, teal);
+	}
+	&--green {
+		background-color: map-get($theme-colors, green);
+	}
+	&--yellow {
+		background-color: map-get($theme-colors, yellow);
+	}
+	&--orange {
+		background-color: map-get($theme-colors, orange);
+	}
+	&--red {
+		background-color: map-get($theme-colors, red);
+	}
+	&--pink {
+		background-color: map-get($theme-colors, pink);
+	}
+	&--purple {
+		background-color: map-get($theme-colors, purple);
+	}
+	&--violet {
+		background-color: map-get($theme-colors, violet);
+	}
 }

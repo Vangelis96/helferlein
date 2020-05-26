@@ -13,11 +13,19 @@ h2, .h2 {
 
 }
 
+h5, .h5 {
+	@include font-settings(xl, medium);
+}
+
 h6, .h2 {
 	@include font-settings(large, medium, 0.15px);
 }
 
 .caption {
 	@include font-settings(xs, bold, 0.4px, uppercase);
+}
+
+.text--uppercase {
+	text-transform: uppercase;
 }
 

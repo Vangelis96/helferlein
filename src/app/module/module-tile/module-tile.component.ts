@@ -7,7 +7,7 @@ import { Module } from 'src/core/models/module';
 	styleUrls: ['module-tile.component.scss']
 })
 
-export class NameComponent implements OnInit {
+export class ModuleTileComponent implements OnInit {
 
 	@Input() module: Module;
 
