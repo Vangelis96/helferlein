@@ -13,6 +13,10 @@ h2, .h2 {
 
 }
 
+h4, .h4 {
+	@include font-settings(xxxl, medium, 0.25px);
+}
+
 h5, .h5 {
 	@include font-settings(xl, medium);
 }

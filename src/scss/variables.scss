@@ -45,4 +45,22 @@ $font-size: (
 	large: 20px,
 	xl: 24px,
 	xxl: 28px,
+	xxxl: 30px,
+	huge: 48px,
+	xh: 60px,
+	xxh: 96px,
+);
+
+$default-spacer: 10px;
+$spacing: (
+	0: $default-spacer * 0,
+	1: $default-spacer * 0.25,
+	2: $default-spacer * 0.5,
+	3: $default-spacer,
+	4: $default-spacer * 1.5,
+	5: $default-spacer * 2,
+	6: $default-spacer * 3,
+	7: $default-spacer * 4,
+	8: $default-spacer * 6,
+	9: $default-spacer * 8,
 );

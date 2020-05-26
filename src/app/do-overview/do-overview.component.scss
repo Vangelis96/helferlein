@@ -1,0 +1,5 @@
+@import '../../scss/variables';
+
+.title {
+	margin-top: map-get($spacing, 9);
+}
