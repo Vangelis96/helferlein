@@ -15,13 +15,13 @@
 							<div class="d-none d-lg-flex col-lg-9 flex-v-center">
 								<ul class="navigation-desktop">
 									<li>
-										<hlf-icon-button icon="add">Erstellen</hlf-icon-button>
+										<hlf-icon-button icon="add" [link]="['/', 'create-overview']">Erstellen</hlf-icon-button>
 									</li>
 									<li>
-										<hlf-icon-button icon="check">Erledigen</hlf-icon-button>
+										<hlf-icon-button icon="check" [link]="['/', 'do-overview']">Erledigen</hlf-icon-button>
 									</li>
 									<li>
-										<hlf-icon-button icon="folder">Module</hlf-icon-button>
+										<hlf-icon-button icon="folder" [link]="['/', 'module-overview']">Module</hlf-icon-button>
 									</li>
 								</ul>
 							</div>
@@ -38,10 +38,25 @@
 				<ng-content></ng-content>
 			</div>
 			<footer>
-				<div class="container">
-					<div class="row">
-						<div class="col">
+				<div class="container h-100">
+					<div class="row h-100">
+						<div class="col d-none d-lg-flex h-100">
 							Helferlein
+						</div>
+						<div class="col d-flex d-lg-none h-100">
+							<div class="navigation footer-navigation">
+								<ul class="navigation-mobile">
+									<li>
+										<hlf-icon-button icon="add" [link]="['/', 'create-overview']">Erstellen</hlf-icon-button>
+									</li>
+									<li>
+										<hlf-icon-button icon="check" [link]="['/', 'do-overview']">Erledigen</hlf-icon-button>
+									</li>
+									<li>
+										<hlf-icon-button icon="folder" [link]="['/', 'module-overview']">Module</hlf-icon-button>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>

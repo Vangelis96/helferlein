@@ -8,6 +8,10 @@ header {
 	background-color: map-get($theme-colors, main-blue);
 }
 
+.footer-navigation {
+	width: 100%;
+}
+
 .navigation {
 	display: flex;
 	align-items: center;
@@ -36,6 +40,20 @@ header {
 			&:last-child {
 				padding-right: 0;
 			}
+		}
+	}
+
+	&-mobile {
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		width: 100%;
+
+		li {
+			display: inline-block;
+			height: 100%;
 		}
 	}
 
