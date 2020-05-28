@@ -1,4 +1,5 @@
 @import '../../scss/variables.scss';
+@import '~bootstrap/scss/mixins';
 
 :host {
 	height: 100%;
@@ -12,7 +13,11 @@
 	align-items: center;
 	height: 100%;
 	justify-content: center;
-	min-width: 125px;
+	min-width: 90px;
+
+	@include media-breakpoint-up(sm) {
+		min-width: 125px;
+	}
 
 	&--inverted {
 		background-color: map-get($theme-colors, white);

@@ -1,0 +1,10 @@
+// Spacing for module grid
+.col--module {
+	margin: map-get($spacing, 3) 0;
+
+	@include media-breakpoint-up(lg) {
+		margin: map-get($spacing, 4) 0;
+	} // Query
+}
+
+

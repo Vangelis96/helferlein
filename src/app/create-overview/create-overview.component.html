@@ -1,3 +1,36 @@
 <hlf-page>
-
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h1>Module</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4 col-md-3 col--module" *ngFor="let module of modules" (touchstart)="test($event)" (touchend)="test($event)">
+				<hlf-module-tile [module]="module"></hlf-module-tile>
+			</div>
+		</div>
+		<div class="row d-block d-lg-none">
+			<div class="col-12">
+				<h1>Erfassen</h1>
+			</div>
+		</div>
+		<div class="row d-block d-lg-none">
+			<div class="col-12">
+				<button mat-button class="c-create-element-button --green" (touchstart)="test($event)" (touchend)="test($event)">
+					Aufgabe
+				</button>
+			</div>
+			<div class="col-12">
+				<button mat-button class="c-create-element-button --yellow">
+					Abgabe
+				</button>
+			</div>
+			<div class="col-12">
+				<button mat-button class="c-create-element-button --red">
+					Prüfung
+				</button>
+			</div>
+		</div>
+	</div>
 </hlf-page>

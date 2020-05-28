@@ -67,6 +67,13 @@ header {
 footer {
 	background-color: map-get($theme-colors, main-blue);
 	height: 70px;
+
+	position: sticky;
+	bottom: 0;
+
+	@include media-breakpoint-up(lg) {
+		position: initial;
+	}
 }
 
 .page-wrapper {
@@ -80,7 +87,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 
-	padding: map-get($spacing, 5) 0;
+	padding: map-get($spacing, 5) 0 42px 0;
 }
 @media (min-width : map-get($grid-breakpoints, lg ))  {
 	.content-section {

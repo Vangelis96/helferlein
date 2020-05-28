@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +23,7 @@ import { DoOverviewModule } from './do-overview';
 	CommonModule,
 	CreateOverviewModule,
 	DoOverviewModule,
+	HammerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
