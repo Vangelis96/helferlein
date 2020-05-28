@@ -2,11 +2,12 @@
 @import "../../../scss/variables.scss";
 
 .c-module-tile {
-	min-height: 130px;
+	min-height: 64px;
 	padding: 15px;
 	border-radius: 4px;
 	background-color: map-get($theme-colors, grey1); // default color for white font
 	color: map-get($theme-colors, white);
+	text-align: center;
 
 	&--indigo {
 		background-color: map-get($theme-colors, indigo);
@@ -36,3 +37,23 @@
 		background-color: map-get($theme-colors, violet);
 	}
 }
+.c-module-tile__title {
+	margin-bottom: 0;
+	font-size: map-get($font-size, large);
+	font-weight: map-get($font-weight, medium);
+	text-transform: uppercase;
+}
+@media (min-width : map-get($grid-breakpoints, sm ))  {
+	.c-module-tile {
+		min-height: 80px;
+	}
+} // Query
+
+@media (min-width : map-get($grid-breakpoints, lg ))  {
+	.c-module-tile {
+		min-height: 110px;
+	}
+	.c-module-tile__title {
+		font-size: map-get($font-size, xl);
+	}
+} // Query
