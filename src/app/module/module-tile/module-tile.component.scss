@@ -1,5 +1,6 @@
 
 @import "../../../scss/variables.scss";
+@import "~bootstrap/scss/mixins";
 
 .c-module-tile {
 	min-height: 64px;
@@ -37,24 +38,30 @@
 	&--violet {
 		background-color: map-get($theme-colors, violet);
 	}
-}
-.c-module-tile__title {
-	margin-bottom: 0;
-	font-size: map-get($font-size, large);
-	font-weight: map-get($font-weight, medium);
-	text-transform: uppercase;
-}
-@media (min-width : map-get($grid-breakpoints, sm ))  {
-	.c-module-tile {
+
+	&__title {
+		margin-bottom: 0;
+		font-size: map-get($font-size, large);
+		font-weight: map-get($font-weight, bold);
+		letter-spacing: 0.75px;
+		text-transform: uppercase;
+
+		@include media-breakpoint-up(lg) {
+			font-size: map-get($font-size, xl);
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
 		min-height: 80px;
 	}
-} // Query
 
-@media (min-width : map-get($grid-breakpoints, lg ))  {
-	.c-module-tile {
+	@include media-breakpoint-up(lg) {
 		min-height: 110px;
 	}
-	.c-module-tile__title {
-		font-size: map-get($font-size, xl);
-	}
-} // Query
+}
+
+.add-button-wrapper {
+	position: absolute;
+	right: map-get($spacing, 6);
+	bottom: map-get($spacing, 4);
+}

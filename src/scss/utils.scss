@@ -1,8 +1,10 @@
+@import "~bootstrap/scss/mixins";
 
 @mixin flex-v-center {
 	display: flex;
 	align-items: center;
 }
+
 @mixin flex-center {
 	display: flex;
 	justify-content: center;
@@ -15,6 +17,14 @@
 
 .flex-center {
 	@include flex-center();
+}
+
+.flex-lg-start-left {
+	@include media-breakpoint-up(lg) {
+		display: flex;
+		align-items: flex-start;
+		justify-content: left;
+	}
 }
 
 .f-right {

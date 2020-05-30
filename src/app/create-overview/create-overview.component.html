@@ -2,17 +2,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h1>Module</h1>
+				<h4>Module</h4>
 			</div>
 		</div>
 		<div class="row" id="modules">
 			<div class="col-4 col-md-3 col--module" *ngFor="let module of modules">
-				<hlf-module-tile [module]="module"></hlf-module-tile>
+				<hlf-module-tile [module]="module" createMode></hlf-module-tile>
 			</div>
 		</div>
 		<div class="row d-block d-lg-none">
 			<div class="col-12">
-				<h1>Erfassen</h1>
+				<h1 class="h4">Erfassen</h1>
 			</div>
 		</div>
 		<div class="row d-block d-lg-none">

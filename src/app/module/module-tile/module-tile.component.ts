@@ -9,7 +9,18 @@ import { Module } from 'src/core/models/module';
 
 export class ModuleTileComponent implements OnInit {
 
+	private _createMode = false;
 	@Input() module: Module;
+	@Input() set createMode(value) {
+		console.log(value);
+		if (value !== false) {
+			this._createMode = true;
+		}
+	}
+
+	get createMode(): boolean {
+		return this._createMode;
+	}
 
 	constructor() { }
 

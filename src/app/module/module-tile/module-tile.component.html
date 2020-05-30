@@ -1,3 +1,8 @@
-<div class="c-module-tile c-module-tile--{{ module.color}} flex-center">
+<div class="c-module-tile c-module-tile--{{ module.color}} flex-center flex-lg-start-left">
 	<h2 class="c-module-tile__title">{{ module.shortName}}</h2>
+	<div class="add-button-wrapper d-none d-lg-block" *ngIf="createMode">
+		<button mat-fab color="primary">
+			<mat-icon>add</mat-icon>
+		</button>
+	</div>
 </div>
