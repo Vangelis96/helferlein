@@ -12,6 +12,9 @@ export class CreateOverviewComponent implements OnInit {
 
 	userId = 0;
 	modules: Module[];
+	lastMove;
+	startId;
+	endId;
 
 	constructor(
 		private _moduleService: ModuleService
@@ -23,6 +26,23 @@ export class CreateOverviewComponent implements OnInit {
 		})
 	}
 
-	test(event) {console.log(event)}
+	test(event) {
+		console.log(event);
+		event.preventDefault();
+		event.stopPropagation();
+		var changedTouch = event.changedTouches[0];
+		if (!changedTouch) changedTouch = this.lastMove.changedTouches[0];
+		var elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
+		this.lastMove = event;
+		console.log(elem);
+	}
+
+	onStart(event: TouchEvent) {
+		console.log(event);
+	}
+
+	onMove(event) {
+		this.lastMove = event;
+	}
 
 }

@@ -5,8 +5,8 @@
 				<h1>Module</h1>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-4 col-md-3 col--module" *ngFor="let module of modules" (touchstart)="test($event)" (touchend)="test($event)">
+		<div class="row" id="modules">
+			<div class="col-4 col-md-3 col--module" *ngFor="let module of modules">
 				<hlf-module-tile [module]="module"></hlf-module-tile>
 			</div>
 		</div>
@@ -17,17 +17,17 @@
 		</div>
 		<div class="row d-block d-lg-none">
 			<div class="col-12">
-				<button mat-button class="c-create-element-button --green" (touchstart)="test($event)" (touchend)="test($event)">
+				<button mat-button class="c-create-element-button --green">
 					Aufgabe
 				</button>
 			</div>
 			<div class="col-12">
-				<button mat-button class="c-create-element-button --yellow">
+				<button mat-button class="c-create-element-button --yellow" id="button-2">
 					Abgabe
 				</button>
 			</div>
 			<div class="col-12">
-				<button mat-button class="c-create-element-button --red">
+				<button mat-button class="c-create-element-button --red" id="button-3">
 					Prüfung
 				</button>
 			</div>
