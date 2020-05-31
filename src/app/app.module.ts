@@ -12,7 +12,7 @@ import { DoOverviewModule } from './do-overview';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
 	BrowserModule,
@@ -23,7 +23,7 @@ import { DoOverviewModule } from './do-overview';
 	CommonModule,
 	CreateOverviewModule,
 	DoOverviewModule,
-	HammerModule,
+  HammerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

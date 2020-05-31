@@ -21,7 +21,8 @@ h5, .h5 {
 	@include font-settings(xl, medium);
 }
 
-h6, .h2 {
+h6, .h2,
+.mat-list-base h6.mat-subheader {
 	@include font-settings(large, medium, 0.15px);
 }
 
