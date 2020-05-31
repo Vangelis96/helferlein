@@ -25,6 +25,9 @@ h6, .h2,
 .mat-list-base h6.mat-subheader {
 	@include font-settings(large, medium, 0.15px);
 }
+.mat-list-base h6.mat-subheader {
+	color: map-get($theme-colors, white);
+}
 
 .caption {
 	@include font-settings(xs, bold, 0.4px, uppercase);

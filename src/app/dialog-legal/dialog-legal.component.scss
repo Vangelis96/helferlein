@@ -1,0 +1,7 @@
+@import "../../scss/variables.scss";
+
+.mat-typography {
+  a {
+    color: map-get($theme-colors, grey1);
+  }
+}
