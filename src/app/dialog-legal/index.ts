@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { DialogLegalComponent } from './dialog-legal.component'
+import { DialogLegalComponent, DialogContentImprintComponent, DialogContentPrivacyComponent } from './dialog-legal.component'
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatListModule } from '@angular/material/list';
@@ -9,12 +9,16 @@ import { MatButtonModule } from '@angular/material/button';
 	imports: [
 		MatDialogModule,
 		MatListModule,
-		MatButtonModule
+		MatButtonModule,
 	],
 	exports: [
-		DialogLegalComponent
+		DialogLegalComponent,
 	],
-	declarations: [DialogLegalComponent],
+	declarations: [
+		DialogLegalComponent,
+		DialogContentImprintComponent,
+		DialogContentPrivacyComponent,
+	],
 	providers: [],
 })
-export class DialogLegal { }
+export class DialogLegalModule { }

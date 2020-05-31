@@ -6,7 +6,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { PageComponent } from './page/page.component';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { IconButtonModule } from '../icon-button';
-import { DialogLegal } from '../dialog-legal';
+import { DialogLegalModule } from '../dialog-legal';
 
 @NgModule({
 	imports: [
@@ -16,7 +16,7 @@ import { DialogLegal } from '../dialog-legal';
 		OverlayModule,
 		IconButtonModule,
 		MatListModule,
-		DialogLegal,
+		DialogLegalModule,
 	],
 	exports: [
 		PageComponent
