@@ -1,8 +1,22 @@
 <div class="c-module-tile c-module-tile--{{ module.color}} flex-center flex-lg-start-left">
 	<h2 class="c-module-tile__title">{{ module.shortName}}</h2>
 	<div class="add-button-wrapper d-none d-lg-block" *ngIf="createMode">
-		<button mat-fab color="primary">
+		<button mat-fab color="primary" [matMenuTriggerFor]="createMenu">
 			<mat-icon>add</mat-icon>
 		</button>
+		<mat-menu #createMenu="matMenu">
+			<button mat-menu-item>
+				<mat-icon>library_add_check</mat-icon>
+				Aufgabe
+			</button>
+			<button mat-menu-item>
+				<mat-icon>move_to_inbox</mat-icon>
+				Abgabe
+			</button>
+			<button mat-menu-item>
+				<mat-icon>rate_review</mat-icon>
+				Prüfung
+			</button>
+		  </mat-menu>
 	</div>
 </div>

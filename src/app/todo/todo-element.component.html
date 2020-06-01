@@ -1,0 +1,25 @@
+<mat-card *ngIf="toDoElement" class="element">
+	<div class="row">
+		<div class="col-2">
+			<div>
+				<mat-icon *ngIf="hasIcon()">{{getIcon()}}</mat-icon>
+				<mat-checkbox *ngIf="!hasIcon()"></mat-checkbox>
+			</div>
+		</div>
+		<div class="col-8">
+			<div class="text-date-wrapper">
+				<div class="body-2">
+					{{ toDoElement.text }}
+				</div>
+				<div class="overline" [ngClass]="isTomorrow() ? 'highlighted' : ''">
+					{{ isTomorrow() ? ('Morgen | ' + (toDoElement.dueDate | date: 'HH:mm')) : toDoElement.dueDate | date: 'dd.MM.yyyy | HH:mm' }}
+				</div>
+			</div>
+		</div>
+		<div class="col-2">
+			<div class="module flex-right">
+				<span class="caption" [ngClass]="'module--' + toDoElement.module.color">{{ toDoElement.module.shortName }}</span>
+			</div>
+		</div>
+	</div>
+</mat-card>

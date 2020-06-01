@@ -1,0 +1,13 @@
+@import '../../scss/variables.scss';
+@import '../../scss/text.scss';
+
+.module {
+	@include module-text-colors();
+}
+
+.element {
+	&.mat-card {
+		border-radius: 0;
+		padding: map-get($spacing, 3) map-get($spacing, 4);
+	}
+}

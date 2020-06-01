@@ -5,8 +5,68 @@
 	text-transform: $transform;
 }
 
-h1, .h1 {
+@mixin module-background-colors() {
+	&--indigo {
+		background-color: map-get($theme-colors, indigo);
+	}
+	&--teal {
+		background-color: map-get($theme-colors, teal);
+	}
+	&--green {
+		background-color: map-get($theme-colors, green);
+	}
+	&--yellow {
+		background-color: map-get($theme-colors, yellow);
+	}
+	&--orange {
+		background-color: map-get($theme-colors, orange);
+	}
+	&--red {
+		background-color: map-get($theme-colors, red);
+	}
+	&--pink {
+		background-color: map-get($theme-colors, pink);
+	}
+	&--purple {
+		background-color: map-get($theme-colors, purple);
+	}
+	&--violet {
+		background-color: map-get($theme-colors, violet);
+	}
+}
 
+@mixin module-text-colors() {
+	&--indigo {
+		color: map-get($theme-colors, indigo);
+	}
+	&--teal {
+		color: map-get($theme-colors, teal);
+	}
+	&--green {
+		color: map-get($theme-colors, green);
+	}
+	&--yellow {
+		color: map-get($theme-colors, yellow);
+	}
+	&--orange {
+		color: map-get($theme-colors, orange);
+	}
+	&--red {
+		color: map-get($theme-colors, red);
+	}
+	&--pink {
+		color: map-get($theme-colors, pink);
+	}
+	&--purple {
+		color: map-get($theme-colors, purple);
+	}
+	&--violet {
+		color: map-get($theme-colors, violet);
+	}
+}
+
+h1, .h1 {
+	margin-top: map-get($spacing, 4);
 }
 
 h2, .h2 {
@@ -15,6 +75,8 @@ h2, .h2 {
 
 h4, .h4 {
 	@include font-settings(xxxl, medium, 0.25px);
+
+	margin-top: map-get($spacing, 4);
 }
 
 h5, .h5 {
@@ -37,3 +99,14 @@ h6, .h2,
 	text-transform: uppercase;
 }
 
+.body-2 {
+	@include font-settings(base, base, 0.25px);
+}
+
+.overline {
+	@include font-settings(xs, bold, 1.5px, uppercase);
+
+	&.highlighted {
+		color: map-get($theme-colors, red);
+	}
+}

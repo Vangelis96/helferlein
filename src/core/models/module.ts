@@ -1,3 +1,4 @@
+import { ToDoType } from './todo-type';
 
 export interface Module {
 	id: number;
@@ -8,4 +9,11 @@ export interface Module {
 	ects: number;
 	startTime: Date;
 	endTime: Date;
+}
+
+export interface ToDoElement {
+	text: string;
+	dueDate: Date;
+	module: Module;
+	type: ToDoType;
 }

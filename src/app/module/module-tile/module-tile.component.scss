@@ -1,5 +1,6 @@
 
 @import "../../../scss/variables.scss";
+@import "../../../scss/text.scss";
 @import "~bootstrap/scss/mixins";
 
 .c-module-tile {
@@ -11,33 +12,7 @@
 	text-align: center;
 	user-select: none;
 
-	&--indigo {
-		background-color: map-get($theme-colors, indigo);
-	}
-	&--teal {
-		background-color: map-get($theme-colors, teal);
-	}
-	&--green {
-		background-color: map-get($theme-colors, green);
-	}
-	&--yellow {
-		background-color: map-get($theme-colors, yellow);
-	}
-	&--orange {
-		background-color: map-get($theme-colors, orange);
-	}
-	&--red {
-		background-color: map-get($theme-colors, red);
-	}
-	&--pink {
-		background-color: map-get($theme-colors, pink);
-	}
-	&--purple {
-		background-color: map-get($theme-colors, purple);
-	}
-	&--violet {
-		background-color: map-get($theme-colors, violet);
-	}
+	@include module-background-colors();
 
 	&__title {
 		margin-bottom: 0;

@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { ModuleModule } from '../module';
 import { MatButtonModule } from '@angular/material/button';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
 	imports: [
@@ -14,6 +15,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 		ModuleModule,
 		MatButtonModule,
 		DragDropModule,
+		MatIconModule,
 	],
 	exports: [
 		CreateOverviewComponent

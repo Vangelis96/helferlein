@@ -2,10 +2,28 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-lg-6">
-				<h4 class="title">Prüfungen & Abgaben</h4>
+				<div class="row">
+					<div class="col">
+						<h4>Prüfungen & Abgaben</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<hlf-todo-element *ngFor="let element of examsAndSubmissions" [toDoElement]="element"></hlf-todo-element>
+					</div>
+				</div>
 			</div>
 			<div class="col-12 col-lg-6">
-				<h4 class="title">Aufgaben</h4>
+				<div class="row">
+					<div class="col">
+						<h4>Aufgaben</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<hlf-todo-element *ngFor="let element of tasks" [toDoElement]="element"></hlf-todo-element>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

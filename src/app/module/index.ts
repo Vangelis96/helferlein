@@ -5,6 +5,7 @@ import { LayoutModule } from '../layout';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 	  CommonModule,
 	  MatButtonModule,
 	  MatIconModule,
+	  MatMenuModule,
   ],
   exports: [ModulePageComponent, ModuleTileComponent],
   declarations: [ModulePageComponent, ModuleTileComponent],

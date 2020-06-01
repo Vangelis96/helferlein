@@ -1,5 +1,8 @@
 @import '../../scss/variables';
+@import '~bootstrap/scss/mixins';
 
-.title {
-	margin-top: map-get($spacing, 9);
+h4 {
+	@include media-breakpoint-up(lg) {
+		margin-top: map-get($spacing, 9);
+	}
 }
