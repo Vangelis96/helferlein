@@ -6,17 +6,35 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { ModuleCreateComponent } from './module-create/module-create.component';
+import { ModuleComponent } from './module/module.component';
+import { RouterModule } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   imports: [
-	  LayoutModule,
-	  CommonModule,
-	  MatButtonModule,
-	  MatIconModule,
-	  MatMenuModule,
+		LayoutModule,
+		CommonModule,
+		MatButtonModule,
+		MatIconModule,
+		MatMenuModule,
+		RouterModule,
+		MatCardModule,
+		MatFormFieldModule,
+		MatInputModule,
   ],
-  exports: [ModulePageComponent, ModuleTileComponent],
-  declarations: [ModulePageComponent, ModuleTileComponent],
+  exports: [
+		ModulePageComponent,
+		ModuleTileComponent
+	],
+  declarations: [
+		ModulePageComponent,
+		ModuleTileComponent,
+		ModuleCreateComponent,
+		ModuleComponent,
+	],
   providers: [],
 })
 export class ModuleModule { }

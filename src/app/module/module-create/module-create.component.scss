@@ -1,0 +1,9 @@
+@import "../../../scss/variables.scss";
+
+.mat-card {
+	background-color: map-get($theme-colors, light-grey);
+}
+
+.container {
+	padding-top: map-get($spacing, 4);
+}

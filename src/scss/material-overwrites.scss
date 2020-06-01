@@ -1,3 +1,8 @@
 .mat-fab .mat-button-wrapper .mat-icon {
 	vertical-align: initial;
 }
+
+.mat-form-field-flex {
+	background-color: map-get($theme-colors, grey2);
+	padding: map-get($spacing, 2) map-get($spacing, 3) 0 map-get($spacing, 3);
+}

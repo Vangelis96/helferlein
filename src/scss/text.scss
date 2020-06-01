@@ -73,6 +73,10 @@ h2, .h2 {
 
 }
 
+h3, .h3 {
+	@include font-settings(huge, base);
+}
+
 h4, .h4 {
 	@include font-settings(xxxl, medium, 0.25px);
 

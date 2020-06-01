@@ -102,10 +102,5 @@ footer {
 
 	padding: 0 0 65px 0;
 }
-@media (min-width : map-get($grid-breakpoints, lg ))  {
-	.content-section {
-		padding: map-get($spacing, 6) 0;
-	}
-} // Query
 
 

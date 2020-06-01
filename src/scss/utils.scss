@@ -11,6 +11,11 @@
 	align-items: center;
 }
 
+.flex-center-right {
+	@include flex-v-center;
+	justify-content: right;
+}
+
 .flex-v-center {
 	@include flex-v-center();
 }

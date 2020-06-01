@@ -11,21 +11,19 @@ import { CreateOverviewModule } from './create-overview';
 import { DoOverviewModule } from './do-overview';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-	BrowserModule,
-	BrowserAnimationsModule,
-    AppRoutingModule,
-	ModuleModule,
-	LayoutModule,
-	CommonModule,
-	CreateOverviewModule,
-	DoOverviewModule,
-  HammerModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [AppComponent],
+	imports: [
+		BrowserModule,
+		BrowserAnimationsModule,
+		AppRoutingModule,
+		ModuleModule,
+		LayoutModule,
+		CommonModule,
+		CreateOverviewModule,
+		DoOverviewModule,
+		HammerModule,
+	],
+	providers: [],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
