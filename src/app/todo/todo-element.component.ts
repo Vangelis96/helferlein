@@ -12,6 +12,8 @@ export class ToDoElementComponent implements OnInit {
 
 	private _todoElement: ToDoElement;
 
+	@Input() isLast = false;
+
 	@Input() set toDoElement(value: ToDoElement) {
 		this._todoElement = value;
 	}
