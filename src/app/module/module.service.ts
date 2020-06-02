@@ -59,7 +59,7 @@ export class ModuleService {
 				lecturer: "Dr. Dieter Holz",
 			},
 			{
-				id: 5,
+				id: 6,
 				name: "Lineare Algebra und Geometrie",
 				shortName: "LAG",
 				color: "indigo",

@@ -11,6 +11,7 @@ import { ToDoElement } from 'src/core/models/module';
 export class ToDoElementComponent implements OnInit {
 
 	private _todoElement: ToDoElement;
+	private _moduleMode = false;
 
 	@Input() isLast = false;
 
@@ -20,6 +21,17 @@ export class ToDoElementComponent implements OnInit {
 
 	get toDoElement(): ToDoElement {
 		return this._todoElement;
+	}
+
+	@Input() set moduleMode(value) {
+		console.log(value);
+		if (value !== false) {
+			this._moduleMode = true;
+		}
+	}
+
+	get moduleMode(): boolean {
+		return this._moduleMode;
 	}
 
 	constructor() { }

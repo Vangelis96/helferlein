@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<div class="col-2">
-			<div class="module flex-right">
+			<div class="module flex-right" *ngIf="moduleMode">
 				<span class="caption" [ngClass]="'module--' + toDoElement.module.color">{{ toDoElement.module.shortName }}</span>
 			</div>
 		</div>
