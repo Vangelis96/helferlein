@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModuleService } from '../module/module.service';
 import { Module } from 'src/core/models/module';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'hlf-create-overview',
@@ -15,9 +16,11 @@ export class CreateOverviewComponent implements OnInit {
 	lastMove;
 	startId;
 	endId;
+	touchStartModule: Module;
 
 	constructor(
-		private _moduleService: ModuleService
+		private _moduleService: ModuleService,
+		private _router: Router,
 	) { }
 
 	ngOnInit() {
@@ -26,23 +29,31 @@ export class CreateOverviewComponent implements OnInit {
 		})
 	}
 
-	test(event) {
-		console.log(event);
-		event.preventDefault();
-		event.stopPropagation();
-		var changedTouch = event.changedTouches[0];
-		if (!changedTouch) changedTouch = this.lastMove.changedTouches[0];
-		var elem = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
-		this.lastMove = event;
-		console.log(elem);
+	setModule(module: Module) {
+		this.touchStartModule = module;
 	}
 
-	onStart(event: TouchEvent) {
-		console.log(event);
+	setAction(event) {
+		var element = document.elementFromPoint(event.center.x, event.center.y);
+		this.searchButton(element, 0);
 	}
 
-	onMove(event) {
-		this.lastMove = event;
+	searchButton(element: Element, depth: number) {
+		if (element != null && depth < 5) {
+			if (element.tagName == 'BUTTON') {
+				this.readAction(element);
+			} else {
+				this.searchButton(element.parentElement, depth + 1);
+			}
+		}
 	}
 
+	readAction(element: Element) {
+		switch (element.id) {
+			case 'task': this._router.navigate(['/', 'task', 'create']); break;
+			case 'submission': this._router.navigate(['/', 'submission', 'create']); break;
+			case 'exam': this._router.navigate(['/', 'exam', 'create']); break;
+			default: break;
+		}
+	}
 }

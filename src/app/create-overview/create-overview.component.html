@@ -6,7 +6,7 @@
 			</div>
 		</div>
 		<div class="row" id="modules">
-			<div class="col-4 col-md-3 col--module" *ngFor="let module of modules">
+			<div class="col-4 col-md-3 col--module" *ngFor="let module of modules" (panstart)="setModule(module)" (panend)="setAction($event)">
 				<hlf-module-tile [module]="module" createMode></hlf-module-tile>
 			</div>
 		</div>
@@ -17,19 +17,19 @@
 		</div>
 		<div class="row d-block d-lg-none">
 			<div class="col-12">
-				<button mat-button class="c-create-element-button --green">
+				<button mat-button class="c-create-element-button --green" id="task">
 					<mat-icon>library_add_check</mat-icon>
 					Aufgabe
 				</button>
 			</div>
 			<div class="col-12">
-				<button mat-button class="c-create-element-button --yellow" id="button-2">
+				<button mat-button class="c-create-element-button --yellow" id="submission">
 					<mat-icon>move_to_inbox</mat-icon>
 					Abgabe
 				</button>
 			</div>
 			<div class="col-12">
-				<button mat-button class="c-create-element-button --red" id="button-3">
+				<button mat-button class="c-create-element-button --red" id="exam">
 					<mat-icon>rate_review</mat-icon>
 					Prüfung
 				</button>

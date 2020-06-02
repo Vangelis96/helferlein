@@ -12,12 +12,11 @@ import { ModuleService } from '../module.service';
 })
 export class ModuleDetailComponent implements OnInit {
 
-	modules: Module[];
 	userId = 0;
 	moduleId;
 	examsAndSubmissions: ToDoElement[];
 	tasks: ToDoElement[];
-
+	selectedModule: Module;
 
   constructor(
 		private route: ActivatedRoute,
@@ -28,7 +27,7 @@ export class ModuleDetailComponent implements OnInit {
   ngOnInit() {
 		this.moduleId = this.route.snapshot.queryParamMap.get('id');
 		this._moduleService.getModulesByUser(this.userId).subscribe(o => {
-			this.modules = o;
+			this.selectedModule = o.find(o => o.id == this.moduleId);
 		})
 
 		this.todoElementService.getPendingExamsAndSubmissions(this.userId).subscribe(result => {

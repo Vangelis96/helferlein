@@ -10,6 +10,9 @@ import { CommonModule } from '@angular/common';
 import { CreateOverviewModule } from './create-overview';
 import { DoOverviewModule } from './do-overview';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { ExamModule } from './exam';
+import { SubmissionModule } from './submission';
+import { TaskModule } from './task';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -24,6 +27,9 @@ import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 		DoOverviewModule,
 		HammerModule,
 		MatNativeDateModule,
+		ExamModule,
+		SubmissionModule,
+		TaskModule,
 	],
 	providers: [
 		{provide: MAT_DATE_LOCALE, useValue: 'de-CH'}
