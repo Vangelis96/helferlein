@@ -244,3 +244,8 @@ $altTheme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
     font-family: 'Barlow';
   }
 }
+
+.mat-primary-inverted {
+	color: map-get($theme-colors, main-blue);
+	background-color: map-get($theme-colors, white-transparent1);
+}

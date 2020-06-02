@@ -1,7 +1,7 @@
 <div class="c-module-tile c-module-tile--{{ module.color}} flex-center flex-lg-start-left">
 	<h2 class="c-module-tile__title">{{ module.shortName}}</h2>
 	<div class="add-button-wrapper d-none d-lg-block" *ngIf="createMode">
-		<button mat-fab color="primary" [matMenuTriggerFor]="createMenu">
+		<button mat-fab color="primary-inverted" [matMenuTriggerFor]="createMenu">
 			<mat-icon>add</mat-icon>
 		</button>
 		<mat-menu #createMenu="matMenu">
