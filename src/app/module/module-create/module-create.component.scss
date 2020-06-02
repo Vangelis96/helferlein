@@ -7,3 +7,12 @@
 .container {
 	padding-top: map-get($spacing, 4);
 }
+
+.button-wrapper {
+	display: flex;
+	justify-content: flex-end;
+
+	button {
+		margin-left: map-get($spacing, 3);
+	}
+}

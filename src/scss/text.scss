@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/mixins";
+
 @mixin font-settings($size: base, $weight: base, $spacing: normal, $transform: none) {
 	font-size: map-get($font-size, $size);
 	font-weight: map-get($font-weight, $weight);
@@ -74,7 +76,11 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	@include font-settings(huge, base);
+	@include media-breakpoint-up(lg) {
+		@include font-settings(huge, base);
+	}
+
+	@include font-settings(xl, medium);
 }
 
 h4, .h4 {
