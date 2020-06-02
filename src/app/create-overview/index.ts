@@ -7,6 +7,7 @@ import { ModuleModule } from '../module';
 import { MatButtonModule } from '@angular/material/button';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
 	imports: [
@@ -16,6 +17,8 @@ import { MatIconModule } from '@angular/material/icon';
 		MatButtonModule,
 		DragDropModule,
 		MatIconModule,
+		RouterModule,
+
 	],
 	exports: [
 		CreateOverviewComponent

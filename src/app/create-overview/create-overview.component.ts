@@ -50,9 +50,21 @@ export class CreateOverviewComponent implements OnInit {
 
 	readAction(element: Element) {
 		switch (element.id) {
-			case 'task': this._router.navigate(['/', 'task', 'create']); break;
-			case 'submission': this._router.navigate(['/', 'submission', 'create']); break;
-			case 'exam': this._router.navigate(['/', 'exam', 'create']); break;
+			case 'task': this._router.navigate(['/', 'task', 'create'], {
+				queryParams: {
+					id: this.touchStartModule.id,
+				}
+			}); break;
+			case 'submission': this._router.navigate(['/', 'submission', 'create'], {
+				queryParams: {
+					id: this.touchStartModule.id,
+				}
+			}); break;
+			case 'exam': this._router.navigate(['/', 'exam', 'create'], {
+				queryParams: {
+					id: this.touchStartModule.id,
+				}
+			}); break;
 			default: break;
 		}
 	}
