@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { CreateOverviewModule } from './create-overview';
 import { DoOverviewModule } from './do-overview';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -25,7 +25,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 		HammerModule,
 		MatNativeDateModule,
 	],
-	providers: [],
+	providers: [
+		{provide: MAT_DATE_LOCALE, useValue: 'de-CH'}
+	],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}
