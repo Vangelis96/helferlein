@@ -13,6 +13,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker'
+import { ModuleDetailComponent } from './module-detail/module-detail.component';
+import { ToDoModule } from '../todo';
 
 @NgModule({
   imports: [
@@ -26,6 +28,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker'
 		MatFormFieldModule,
 		MatInputModule,
 		MatDatepickerModule,
+		ToDoModule,
   ],
   exports: [
 		ModulePageComponent,
@@ -36,6 +39,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker'
 		ModuleTileComponent,
 		ModuleCreateComponent,
 		ModuleComponent,
+		ModuleDetailComponent
 	],
   providers: [],
 })

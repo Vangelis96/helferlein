@@ -5,6 +5,7 @@ import { CreateOverviewComponent } from './create-overview/create-overview.compo
 import { DoOverviewComponent } from './do-overview/do-overview.component';
 import { ModuleComponent } from './module/module/module.component';
 import { ModuleCreateComponent } from './module/module-create/module-create.component';
+import { ModuleDetailComponent } from './module/module-detail/module-detail.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,9 @@ const routes: Routes = [
 		},
 		{
 			path: 'create', component: ModuleCreateComponent,
+		},
+		{
+			path: 'detail', component: ModuleDetailComponent,
 		}
 	]},
 	{ path: 'create-overview', component: CreateOverviewComponent },

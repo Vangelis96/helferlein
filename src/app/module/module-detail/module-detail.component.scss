@@ -1,0 +1,28 @@
+@import '../../../scss/variables';
+@import '~bootstrap/scss/mixins';
+
+h4 {
+	@include media-breakpoint-up(lg) {
+		margin-top: map-get($spacing, 9);
+	}
+}
+
+.mobile-scroll-wrapper {
+	max-height: 200px;
+	overflow-y: auto;
+	padding: 2px;
+
+	@include media-breakpoint-up(lg) {
+		max-height: unset;
+		overflow: unset;
+		padding: 0;
+	}
+}
+
+.todo-element {
+	&:last-of-type {
+		::ng-deep .mat-card {
+			margin-bottom: 3px;
+		}
+	}
+}
