@@ -7,4 +7,7 @@
 	} // Query
 }
 
-
+.c-link {
+	font-weight: map-get($font-weight, medium);
+	color: map-get($theme-colors, grey1);
+}
