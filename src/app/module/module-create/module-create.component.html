@@ -1,44 +1,74 @@
 <hlf-page>
 	<div class="container">
-		<mat-card>
-			<h1 class="h3 d-none d-lg-block">Modul erstellen</h1>
-			<div class="row">
-				<div class="col">
-					<mat-form-field class="w-100">
-						<mat-label class="caption">Modulkürzel</mat-label>
-						<input matInput value="">
-					</mat-form-field>
-				</div>
+		<div class="row">
+			<div class="col-12 col-lg-6 offset-lg-3">
+				<mat-card>
+					<h1 class="h3 d-none d-lg-block">Modul erstellen</h1>
+					<div class="row">
+						<div class="col">
+							<mat-form-field class="w-100">
+								<mat-label class="caption">Modulkürzel</mat-label>
+								<input matInput value="">
+							</mat-form-field>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<mat-form-field class="w-100">
+								<mat-label class="caption">Modulname</mat-label>
+								<input matInput value="">
+							</mat-form-field>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<mat-form-field class="w-100">
+								<mat-label class="caption">Kreditpunkte</mat-label>
+								<input matInput value="">
+							</mat-form-field>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<mat-form-field class="w-100">
+								<mat-label class="caption">Dozent</mat-label>
+								<input matInput value="">
+							</mat-form-field>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<h5>Durchführungszeiten</h5>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<mat-form-field class="w-100">
+								<mat-label class="caption">Erstes Vorlesungsdatum</mat-label>
+								<input matInput [matDatepicker]="datepicker">
+								<mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+								<mat-datepicker #datepicker></mat-datepicker>
+							</mat-form-field>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<mat-form-field class="w-100">
+								<mat-label class="caption">Von</mat-label>
+								<input matInput>
+							</mat-form-field>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<mat-form-field class="w-100">
+								<mat-label class="caption">Bis</mat-label>
+								<input matInput>
+							</mat-form-field>
+						</div>
+					</div>
+				</mat-card>
 			</div>
-			<div class="row">
-				<div class="col">
-					<mat-form-field class="w-100">
-						<mat-label class="caption">Modulname</mat-label>
-						<input matInput value="">
-					</mat-form-field>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<mat-form-field class="w-100">
-						<mat-label class="caption">Kreditpunkte</mat-label>
-						<input matInput value="">
-					</mat-form-field>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<mat-form-field class="w-100">
-						<mat-label class="caption">Dozent</mat-label>
-						<input matInput value="">
-					</mat-form-field>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<h5>Durchführungszeiten</h5>
-				</div>
-			</div>
-		</mat-card>
+		</div>
 	</div>
 </hlf-page>

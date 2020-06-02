@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { CreateOverviewModule } from './create-overview';
 import { DoOverviewModule } from './do-overview';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -22,6 +23,7 @@ import { DoOverviewModule } from './do-overview';
 		CreateOverviewModule,
 		DoOverviewModule,
 		HammerModule,
+		MatNativeDateModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

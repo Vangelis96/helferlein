@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker'
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { MatInputModule } from '@angular/material/input';
 		MatCardModule,
 		MatFormFieldModule,
 		MatInputModule,
+		MatDatepickerModule,
   ],
   exports: [
 		ModulePageComponent,
