@@ -1,9 +1,31 @@
 <hlf-page>
   <div class="container">
 		<div class="row">
-			<div class="col-12">
+			<div class="col">
 				<h1 class="h3 d-none d-lg-block">{{ selectedModule.name }}</h1>
 			</div>
+			<div class="col flex-end-right">
+				<button mat-raised-button color="primary" class="c-horizontal-icon-button" [matMenuTriggerFor]="createMenu">
+					<mat-icon>add</mat-icon>
+					<span class="d-none d-lg-inline">Erstellen</span>
+				</button>
+				<mat-menu #createMenu="matMenu" [routerLink]="['/', 'task', 'create']" [queryParams]="{id: selectedModule.id}">
+					<button mat-menu-item>
+						<mat-icon>library_add_check</mat-icon>
+						Aufgabe
+					</button>
+					<button mat-menu-item [routerLink]="['/', 'submission', 'create']" [queryParams]="{id: selectedModule.id}">
+						<mat-icon>move_to_inbox</mat-icon>
+						Abgabe
+					</button>
+					<button mat-menu-item [routerLink]="['/', 'exam', 'create']" [queryParams]="{id: selectedModule.id}">
+						<mat-icon>rate_review</mat-icon>
+						Prüfung
+					</button>
+				</mat-menu>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-12 col-lg-6">
 				<div class="row">
 					<div class="col">

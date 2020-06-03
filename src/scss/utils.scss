@@ -5,6 +5,11 @@
 	align-items: center;
 }
 
+@mixin flex-v-end {
+	display: flex;
+	align-items: flex-end;
+}
+
 @mixin flex-center {
 	display: flex;
 	justify-content: center;
@@ -13,6 +18,11 @@
 
 .flex-center-right {
 	@include flex-v-center;
+	justify-content: right;
+}
+
+.flex-end-right {
+	@include flex-v-end;
 	justify-content: right;
 }
 
