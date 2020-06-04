@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
 	selector: 'hlf-create-exam',
 	templateUrl: 'create-exam.component.html',
-	styleUrls: ['create-exam.component.html']
+	styleUrls: ['create-exam.component.scss']
 })
 
 export class CreateExamComponent implements OnInit {

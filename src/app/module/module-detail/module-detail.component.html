@@ -9,8 +9,8 @@
 					<mat-icon>add</mat-icon>
 					<span class="d-none d-lg-inline">Erstellen</span>
 				</button>
-				<mat-menu #createMenu="matMenu" [routerLink]="['/', 'task', 'create']" [queryParams]="{id: selectedModule.id}">
-					<button mat-menu-item>
+				<mat-menu #createMenu="matMenu">
+					<button mat-menu-item [routerLink]="['/', 'task', 'create']" [queryParams]="{id: selectedModule.id}">
 						<mat-icon>library_add_check</mat-icon>
 						Aufgabe
 					</button>

@@ -17,19 +17,19 @@
 		</div>
 		<div class="row d-block d-lg-none">
 			<div class="col-12">
-				<button mat-button class="c-create-element-button --green" id="task">
+				<button mat-button (click)="alert()" class="c-create-element-button --green unclickable" disableRipple id="task">
 					<mat-icon>library_add_check</mat-icon>
 					Aufgabe
 				</button>
 			</div>
 			<div class="col-12">
-				<button mat-button class="c-create-element-button --yellow" id="submission">
+				<button mat-button (click)="alert()" class="c-create-element-button --yellow unclickable" disableRipple id="submission">
 					<mat-icon>move_to_inbox</mat-icon>
 					Abgabe
 				</button>
 			</div>
 			<div class="col-12">
-				<button mat-button class="c-create-element-button --red" id="exam">
+				<button mat-button (click)="alert()" class="c-create-element-button --red unclickable" disableRipple id="exam">
 					<mat-icon>rate_review</mat-icon>
 					Prüfung
 				</button>

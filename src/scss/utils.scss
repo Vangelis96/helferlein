@@ -80,3 +80,7 @@
 .clickable {
 	cursor: pointer;
 }
+
+.unclickable {
+	cursor: default !important;
+}

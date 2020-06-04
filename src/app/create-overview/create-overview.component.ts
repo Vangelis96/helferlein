@@ -68,4 +68,8 @@ export class CreateOverviewComponent implements OnInit {
 			default: break;
 		}
 	}
+
+	alert() {
+		alert('Zieh ein Modul auf eine der drei Bereiche');
+	}
 }

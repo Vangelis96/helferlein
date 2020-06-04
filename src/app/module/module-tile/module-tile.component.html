@@ -4,8 +4,8 @@
 		<button mat-fab color="primary-inverted" [matMenuTriggerFor]="createMenu">
 			<mat-icon>add</mat-icon>
 		</button>
-		<mat-menu #createMenu="matMenu" [routerLink]="['/', 'task', 'create']" [queryParams]="{id: module.id}">
-			<button mat-menu-item>
+		<mat-menu #createMenu="matMenu">
+			<button mat-menu-item [routerLink]="['/', 'task', 'create']" [queryParams]="{id: module.id}">
 				<mat-icon>library_add_check</mat-icon>
 				Aufgabe
 			</button>
@@ -20,6 +20,6 @@
 		  </mat-menu>
 	</div>
 </div>
-<div class="c-module-tile c-module-tile--{{ module.color}} c-module-tile--linked flex-center flex-lg-start-left" *ngIf="!createMode" [routerLink]="'../detail'" [queryParams]="{id: module.id}">
-	<h2 class="c-module-tile__title">{{ module.shortName}}</h2>
+<div class="c-module-tile c-module-tile--{{ module.color }} c-module-tile--linked flex-center flex-lg-start-left" *ngIf="!createMode" [routerLink]="'../detail'" [queryParams]="{id: module.id}">
+	<h2 class="c-module-tile__title">{{ module.shortName }}</h2>
 </div>

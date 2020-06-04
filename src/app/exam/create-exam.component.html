@@ -5,5 +5,71 @@
 				<h1>Prüfung erstellen für {{ selectedModule.shortName }}</h1>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col">
+				<mat-form-field class="w-100">
+					<mat-label class="caption">Datum</mat-label>
+					<input matInput [matDatepicker]="datepicker">
+					<mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+					<mat-datepicker #datepicker></mat-datepicker>
+				</mat-form-field>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<mat-form-field class="w-100">
+					<mat-label class="caption">Uhrzeit</mat-label>
+					<input matInput>
+				</mat-form-field>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<mat-form-field class="w-100">
+					<mat-label class="caption">Titel</mat-label>
+					<input matInput value="">
+				</mat-form-field>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<mat-form-field class="w-100">
+					<mat-label class="caption">Beschreibung</mat-label>
+					<textarea matInput value=""></textarea>
+				</mat-form-field>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<h5>Hilfsmittel</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<mat-checkbox #hilfsmittel>erlaubt</mat-checkbox>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<mat-form-field class="w-100">
+					<mat-label class="caption">Beschreibung</mat-label>
+					<textarea matInput value="" [disabled]="!hilfsmittel.checked"></textarea>
+				</mat-form-field>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="button-wrapper">
+					<button mat-raised-button class="c-horizontal-icon-button" color="accent">
+						<mat-icon class="d-none d-sm-inline">cancel</mat-icon>
+						Abbrechen
+					</button>
+					<button mat-raised-button class="c-horizontal-icon-button" color="primary">
+						<mat-icon class="d-none d-sm-inline">add</mat-icon>
+						Erstellen
+					</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </hlf-page>
