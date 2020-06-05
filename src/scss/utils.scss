@@ -18,12 +18,12 @@
 
 .flex-center-right {
 	@include flex-v-center;
-	justify-content: right;
+	justify-content: flex-end;
 }
 
 .flex-end-right {
 	@include flex-v-end;
-	justify-content: right;
+	justify-content: flex-end;
 }
 
 .flex-v-center {
@@ -43,13 +43,13 @@
 	@include media-breakpoint-up(lg) {
 		display: flex;
 		align-items: flex-start;
-		justify-content: left;
+		justify-content: flex-start;
 	}
 }
 
 .flex-right {
 	display: flex;
-	justify-content: right;
+	justify-content: flex-end;
 }
 
 .f-right {
